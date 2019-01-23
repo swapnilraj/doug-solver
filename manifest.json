@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Doug Solver",
+  "version": "0.0.1",
+  "description": "Solves the questions for the online tests.",
+  "icons": {
+    "16":  "icons/16.png",
+    "32":  "icons/32.png",
+    "48":  "icons/48.png",
+    "96":  "icons/96.png",
+    "128": "icons/128.png",
+    "192": "icons/192.png",
+    "256": "icons/256.png",
+    "512": "icons/512.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.scss.tcd.ie/doug.leith/ST3009/*"
+      ],
+      "js": ["./content.js"]
+    }
+  ]
+}
