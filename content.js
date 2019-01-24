@@ -4,8 +4,7 @@ function magic() {
 
   var qs = Array.prototype.slice.call(document.querySelectorAll('a[href="javascript:void(0);"]'));
   var inputFields = Array.prototype.slice.call(document.querySelectorAll('div[contenteditable="true"]'));
-  console.log({qs, inputFields});
-  var answs = qs.map(e => (e.attributes.onclick.value.match(answsRegex) || {1: '' })[1]);
+  var answs = qs.map(e => ((e.attributes.onclick.value || e.onclick.toString()).match(answsRegex) || {1: '' })[1]);
 
   function injectCSS(css) {
     var styleTag = document.createElement('style');
